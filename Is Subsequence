@@ -1,0 +1,27 @@
+class Solution {
+    public boolean isSubsequence(String s, String t) {
+
+    // Initialize pointers for both strings
+
+ int i =0;
+ int j =0;
+
+    // We can iterate until either of them becomes zero...
+
+ while (i < s.length() && j < t.length())
+ {
+    if(s.charAt(i) == t.charAt(j))
+    {
+        i++;
+        j++;
+    }
+    else
+    j++;
+ }
+
+ // If i has travelled full length, this indicates that we were able to find the 
+ //right string
+return (i == s.length());
+
+    }
+}
